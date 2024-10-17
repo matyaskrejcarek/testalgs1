@@ -1,4 +1,127 @@
 <!DOCTYPE html>
-<html>
-    <button><a href="/Homepage.html">homepage</a></button>
+<html lang="cs-cz">
+    <head>
+        <title>AlgsCZ: 3x3 PLL</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class = pageHead>
+            <nav class="topNav">
+                <label class="logo"><a href="/Homepage.html">AlgsCZ</a></label>
+                <ul>
+                    <li><a href="/3x3.html" class="active">3x3</a></li>
+                    <li><a href="/2x2.html" class="active">2x2</a></li>
+                    <li><a href="/4x4.html" class="active">4x4</a></li>
+                    <li><a href="/Pyraminx.html" class="active">Pyraminx</a></li>
+                </ul>
+            </nav>
+            <p class="MadeBy">made by: <a href="https://www.worldcubeassociation.org/persons/2023KREJ01">Matyáš Krejcárek</a></p>
+            <h1>3x3 PLL</h1>
+            <hr>
+        </div>
+        <div class="pageBody">
+            <div class="algsContent">
+                <ul>
+                    <li><a href="#eop">Edges only permutations</a> (H, Z, Ua, Ub)</li>
+                    <li><a href="#cop">Corners only permutations</a> (Aa/Ab, E)</li>
+                    <li><a href="#cep">Permutations of corners and edges</a> (F, Ga/Gb/Gc/Gd, Ja/Jb, Na/Nb, Ra/Rb, T, V, Y)</li>
+                </ul>
+                <hr class="hrLight">
+            </div>
+            <div class="algs">
+                <h2 id="eop">Edges only permutations</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>How it looks</th>
+                        <th>Best algorithm or algorithms</th>
+                    </tr>
+                    <tr>
+                        <td class="algName">H</td>
+                        <td><img src="/img/3x3/PLL-H.png" alt="PLL-H.png"></td>
+                        <td>M2' U M2' U2 M2' U M2'<br><br>M2' U2 M2' U/U' M2' U2 M2' [U'/U]<span style="color: grey;"> - AUF trick</span></td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Ua</td>
+                        <td><img src="/img/3x3/PLL-Ua.png" alt="PLL-Ua.png"></td>
+                        <td>M2' U M U2 M' U M2'<br><br>(y2) R U R' U R' U' R2 U' R' U R' U R [U2]</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Ub</td>
+                        <td><img src="/img/3x3/PLL-Ub.png" alt="PLL-Ub.png"></td>
+                        <td>M2 U' M U2 M' U' M2<br><br>(y2) R' U R' U' R3 U' R' U R U R2</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Z</td>
+                        <td><img src="/img/3x3/PLL-Z.png" alt="PLL-Z.png"></td>
+                        <td>(y') M' U' M2' U' M2' U' M' U2 M2' [U] <span style="color: grey;"> - M moves with left hand</span><br><br>M' U M2' U M2' U M' U2 M2' [U'] <span style="color: grey;"> - M moves with left hand</span></td>
+                    </tr>
+                </table>
+                <br>
+                <hr class="hrUltralight">
+                <h2 id="cop">Corners only permutations</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>How it looks</th>
+                        <th>Best algorithm or algorithms</th>
+                    </tr>
+                    <tr>
+                        <td class="algName">Aa</td>
+                        <td><img src="/img/3x3/PLL-Aa.png" alt="PLL-Aa.png"></td>
+                        <td>(y x) R' U R' D2 R U' R' D2 R2 (x')<br><br>(x) L2 D2 L' U' L D2 L' U L' (x')</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Ab</td>
+                        <td><img src="/img/3x3/PLL-Ab.png" alt="PLL-Ab.png"></td>
+                        <td>(y x) L U' L D2 L' U L D2 L2 (x')<br><br>(y2 x) R2 D2 R U R' D2 R U' R (x')</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">E</td>
+                        <td><img src="/img/3x3/PLL-E.png" alt="PLL-E.png"></td>
+                        <td>(x') (R U' R' D) (R U R' D') (R U R' D) (R U' R' D') (x)<br><br>R U R D R' U R D' R' U' R D R' U' R D' R2 <span style="color: grey;">- rotationless</span></td>
+                    </tr>
+                </table>
+                <br>
+                <hr class="hrUltralight">
+                <h2 id="cep">Permutations of corners and edges</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>How it looks</th>
+                        <th>Best algorithm or algorithms</th>
+                    </tr>
+                    <tr>
+                        <td class="algName">F</td>
+                        <td><img src="/img/3x3/PLL-F.png" alt="PLL-F.png"></td>
+                        <td>R' U' F' (R U R' U') R' F R2 (U' R' U') R U R' U R</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Ga</td>
+                        <td><img src="/img/3x3/PLL-Ga.png" alt="PLL-Ga.png"></td>
+                        <td>R2 U R' U R' U' R U' R2 U' D R' U R D'</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Gb</td>
+                        <td><img src="/img/3x3/PLL-Gb.png" alt="PLL-Gb.png"></td>
+                        <td>R' U' R U D' R2 U R' U R U' R U' R2 D</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Gc</td>
+                        <td><img src="/img/3x3/PLL-Gc.png" alt="PLL-Gc.png"></td>
+                        <td>(y2) R2 F2 R U2 R U2 R' F R U R' U' R' F R2</td>
+                    </tr>
+                    <tr>
+                        <td class="algName">Gd</td>
+                        <td><img src="/img/3x3/PLL-Gd.png" alt="PLL-Gd.png"></td>
+                        <td>R U R' U' D R2 U' R U' R' U R' U R2 D'</td>
+                    </tr>
+                </table>
+            </div>            
+        </div>
+        <hr>
+        <br>
+        <a href="/3x3.html"><button class="ButtonBack">Back</button></a>
+    </body>
 </html>
